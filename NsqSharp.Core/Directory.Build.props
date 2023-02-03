@@ -1,6 +1,6 @@
 ﻿<Project>
 	<PropertyGroup>
-		<Version>0.0.0.1</Version>
+		<Version>0.0.0.2</Version>
 		<Authors>jinyongjinyong@gmail.com</Authors>
 		<NoWarn>$(NoWarn);1591</NoWarn>
 		<LangVersion>Latest</LangVersion>

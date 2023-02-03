@@ -82,9 +82,13 @@ namespace NsqSharp.Utils
             //加载客户端证书
             if (!string.IsNullOrWhiteSpace(ClientCertPath))
             {
-                ClientCerts = ClientCerts ?? new X509Certificate2Collection();
-                var x509 = new X509Certificate2(ClientCertPath, ClientCertPassword);
-                ClientCerts.Add(x509);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), ClientCertPath);
+                if (File.Exists(path))
+                {
+                    ClientCerts = ClientCerts ?? new X509Certificate2Collection();
+                    var x509 = new X509Certificate2(path, ClientCertPassword);
+                    ClientCerts.Add(x509);
+                }
             }
 
             return new TlsConfig
