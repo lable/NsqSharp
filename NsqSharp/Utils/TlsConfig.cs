@@ -50,6 +50,16 @@ namespace NsqSharp.Utils
         public X509Certificate2Collection ClientCerts { get; set; }
 
         /// <summary>
+        /// 客户端证书，支付pfx和p12格式
+        /// </summary>
+        public string ClientCertPath { get; set; }
+
+        /// <summary>
+        /// 客户端证书密码
+        /// </summary>
+        public string ClientCertPassword { get; set; }
+
+        /// <summary>
         /// Gets the enabled <see cref="SslProtocols"/> based on <see cref="MinVersion"/>.
         /// </summary>
         /// <returns>The enabled <see cref="SslProtocols"/>.</returns>
@@ -69,6 +79,14 @@ namespace NsqSharp.Utils
 
         internal TlsConfig Clone()
         {
+            //加载客户端证书
+            if (!string.IsNullOrWhiteSpace(ClientCertPath))
+            {
+                ClientCerts = ClientCerts ?? new X509Certificate2Collection();
+                var x509 = new X509Certificate2(ClientCertPath, ClientCertPassword);
+                ClientCerts.Add(x509);
+            }
+
             return new TlsConfig
             {
                 MinVersion = MinVersion,

@@ -1,0 +1,22 @@
+﻿<Project>
+	<PropertyGroup>
+		<Version>0.0.0.1</Version>
+		<Authors>jinyongjinyong@gmail.com</Authors>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<LangVersion>Latest</LangVersion>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<RootNamespacePrefix>NsqSharp</RootNamespacePrefix>
+		<!--禁用隐式命名空间导入，防止与自定义文件冲突-->
+		<DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+		<PackageOutputPath>$(SolutionDir)\_packages</PackageOutputPath>
+		<Copyright>Copyright：2018-2099</Copyright>
+	</PropertyGroup>
+</Project>

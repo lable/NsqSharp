@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Bus\**" />
+    <EmbeddedResource Remove="Bus\**" />
+    <None Remove="Bus\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\NsqSharp\Api\NsqdHttpClient.cs" Link="Api\NsqdHttpClient.cs" />
+    <Compile Include="..\NsqSharp\Api\NsqHttpApi.cs" Link="Api\NsqHttpApi.cs" />
+    <Compile Include="..\NsqSharp\Api\NsqLookupdHttpClient.cs" Link="Api\NsqLookupdHttpClient.cs" />
+    <Compile Include="..\NsqSharp\Config.cs" Link="Config.cs" />
+    <Compile Include="..\NsqSharp\Consumer.cs" Link="Consumer.cs" />
+    <Compile Include="..\NsqSharp\Core\Command.cs" Link="Core\Command.cs" />
+    <Compile Include="..\NsqSharp\Core\Conn.cs" Link="Core\Conn.cs" />
+    <Compile Include="..\NsqSharp\Core\Delegates.cs" Link="Core\Delegates.cs" />
+    <Compile Include="..\NsqSharp\Core\Errors.cs" Link="Core\Errors.cs" />
+    <Compile Include="..\NsqSharp\Core\ILogger.cs" Link="Core\ILogger.cs" />
+    <Compile Include="..\NsqSharp\Core\Log.cs" Link="Core\Log.cs" />
+    <Compile Include="..\NsqSharp\Core\LogLevel.cs" Link="Core\LogLevel.cs" />
+    <Compile Include="..\NsqSharp\Core\Protocol.cs" Link="Core\Protocol.cs" />
+    <Compile Include="..\NsqSharp\Core\State.cs" Link="Core\State.cs" />
+    <Compile Include="..\NsqSharp\Core\Version.cs" Link="Core\Version.cs" />
+    <Compile Include="..\NsqSharp\Message.cs" Link="Message.cs" />
+    <Compile Include="..\NsqSharp\Producer.cs" Link="Producer.cs" />
+    <Compile Include="..\NsqSharp\Utils\Attributes\DefaultAttribute.cs" Link="Utils\Attributes\DefaultAttribute.cs" />
+    <Compile Include="..\NsqSharp\Utils\Attributes\MaxAttribute.cs" Link="Utils\Attributes\MaxAttribute.cs" />
+    <Compile Include="..\NsqSharp\Utils\Attributes\MinAttribute.cs" Link="Utils\Attributes\MinAttribute.cs" />
+    <Compile Include="..\NsqSharp\Utils\Attributes\OptAttribute.cs" Link="Utils\Attributes\OptAttribute.cs" />
+    <Compile Include="..\NsqSharp\Utils\Binary.cs" Link="Utils\Binary.cs" />
+    <Compile Include="..\NsqSharp\Utils\Channels\Chan.cs" Link="Utils\Channels\Chan.cs" />
+    <Compile Include="..\NsqSharp\Utils\Channels\ChannelClosedException.cs" Link="Utils\Channels\ChannelClosedException.cs" />
+    <Compile Include="..\NsqSharp\Utils\Channels\IChan.cs" Link="Utils\Channels\IChan.cs" />
+    <Compile Include="..\NsqSharp\Utils\Channels\IReceiveOnlyChan.cs" Link="Utils\Channels\IReceiveOnlyChan.cs" />
+    <Compile Include="..\NsqSharp\Utils\Channels\ISendOnlyChan.cs" Link="Utils\Channels\ISendOnlyChan.cs" />
+    <Compile Include="..\NsqSharp\Utils\Channels\Select.cs" Link="Utils\Channels\Select.cs" />
+    <Compile Include="..\NsqSharp\Utils\ConnectionClosedException.cs" Link="Utils\ConnectionClosedException.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\DateTimeExtensions.cs" Link="Utils\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\ObjectExtensions.cs" Link="Utils\Extensions\ObjectExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\OptAttributeExtensions.cs" Link="Utils\Extensions\OptAttributeExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\PropertyInfoExtensions.cs" Link="Utils\Extensions\PropertyInfoExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\RNGCryptoServiceProviderExtensions.cs" Link="Utils\Extensions\RNGCryptoServiceProviderExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\TimeSpanExtensions.cs" Link="Utils\Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\Extensions\X509ChainStatusExtensions.cs" Link="Utils\Extensions\X509ChainStatusExtensions.cs" />
+    <Compile Include="..\NsqSharp\Utils\GoFunc.cs" Link="Utils\GoFunc.cs" />
+    <Compile Include="..\NsqSharp\Utils\IConn.cs" Link="Utils\IConn.cs" />
+    <Compile Include="..\NsqSharp\Utils\IReader.cs" Link="Utils\IReader.cs" />
+    <Compile Include="..\NsqSharp\Utils\ITcpConn.cs" Link="Utils\ITcpConn.cs" />
+    <Compile Include="..\NsqSharp\Utils\IWriter.cs" Link="Utils\IWriter.cs" />
+    <Compile Include="..\NsqSharp\Utils\Loggers\ConsoleLogger.cs" Link="Utils\Loggers\ConsoleLogger.cs" />
+    <Compile Include="..\NsqSharp\Utils\Loggers\TraceLogger.cs" Link="Utils\Loggers\TraceLogger.cs" />
+    <Compile Include="..\NsqSharp\Utils\Net.cs" Link="Utils\Net.cs" />
+    <Compile Include="..\NsqSharp\Utils\Once.cs" Link="Utils\Once.cs" />
+    <Compile Include="..\NsqSharp\Utils\OS.cs" Link="Utils\OS.cs" />
+    <Compile Include="..\NsqSharp\Utils\Slice.cs" Link="Utils\Slice.cs" />
+    <Compile Include="..\NsqSharp\Utils\TcpConn.cs" Link="Utils\TcpConn.cs" />
+    <Compile Include="..\NsqSharp\Utils\Ticker.cs" Link="Utils\Ticker.cs" />
+    <Compile Include="..\NsqSharp\Utils\Time.cs" Link="Utils\Time.cs" />
+    <Compile Include="..\NsqSharp\Utils\Timer.cs" Link="Utils\Timer.cs" />
+    <Compile Include="..\NsqSharp\Utils\TlsConfig.cs" Link="Utils\TlsConfig.cs" />
+    <Compile Include="..\NsqSharp\Utils\WaitGroup.cs" Link="Utils\WaitGroup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Api\" />
+    <Folder Include="Core\" />
+    <Folder Include="Utils\Attributes\" />
+    <Folder Include="Utils\Channels\" />
+    <Folder Include="Utils\Extensions\" />
+    <Folder Include="Utils\Loggers\" />
+  </ItemGroup>
+
+</Project>
