@@ -17,3 +17,4 @@ build_web/
 build_vs/
 .vs/
 /_packages/NsqSharp.Core.0.0.0.1.snupkg
+/_packages/NsqSharp.Core.0.0.0.2.snupkg
